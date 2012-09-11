@@ -4,7 +4,7 @@ class Debugger {
 
     const DEBUG = true;
 
-    public static function blast($msg, $args = null, $die = false) {
+    public static function blast($msg, $args = null, $killer = false) {
 
         if (Debugger::DEBUG) {
             if ($args) {
@@ -17,8 +17,8 @@ class Debugger {
             }else{
                 echo $msg;
             }
-            if($die){
-                die("<hr/>Execution killed by ".get_class().", called by ".$die."<hr/>");
+            if($killer){
+                die("<hr/>Execution killed by ".get_class().", called by ".$killer."<hr/>");
             }
         }
     }
