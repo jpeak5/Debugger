@@ -18,7 +18,7 @@ class Debugger {
                 echo $msg;
             }
             if($die){
-                die("<hr/>Execution killed by ".get_class()."<hr/>");
+                die("<hr/>Execution killed by ".get_class().", called by ".$die."<hr/>");
             }
         }
     }
